@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Rainfall Prediction Webpage</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+       
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@100;500&display=swap" rel="stylesheet">
+	<style type="text/css"></style>
+    </head>
+
+<body>
+<header>
+    <div class="header1">
+        <img src="{{url_for('static', filename='css/logo.png')}}" alt="logo" />
+      </div>
+        <div class="navbar">
+		<ul>
+			
+            
+
+             
+
+			<div class="nav"><a href="">HOME</a></div>
+			<div class="nav"><a href="{{ url_for('predict') }}">PREDICTOR</a></div>
+            <div class="nav"><a href="{{ url_for('about') }}">ABOUT</a></div>
+			<div class="nav"><a href="{{ url_for('help') }}">HELP</a></div>
+			<div class="nav"><a href="{{ url_for('contact') }}">CONTACT</a></div>
+
+		</ul>
+    </div>
+	</header>
+	<div>
+		<div class="head1">
+		Forecast Rainfall 
+	</div>
+	<div class="body1">
+		We serve as an early warning system to exactly determine the rainfall for effective use of water resources, 
+        crop productivity, and pre-planning of water structures.
+	</div>
+	</div>
+    </body>
+    <footer><p>IBM - Nalaiya Thiran</p></footer>
+    </html>

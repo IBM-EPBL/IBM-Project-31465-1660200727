@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Rainfall Prediction</title>
+<style>
+  body {
+  background: linear-gradient(45deg, rgb(250, 250, 169), rgb(255, 202, 77)) fixed;
+ 
+}
+div.gallery {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 366px;
+  height: 280px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  margin-top: 15vh;
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.icon img {
+        float: left;
+        width: 100px;
+        height: 100px;
+        
+        margin-left: 5%;
+      }
+</style>
+</head>
+<body>
+
+  <div class="icon">
+    <img src="{{url_for('static', filename='css/sun.png')}}" alt="logo" />
+  </div>
+
+<center><h1>No chances of rain today</h1>
+<br> 
+<h2>You can follow any of the following process for effective agriculture!</h2></center>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://westafricanagri.com/wp-content/uploads/2020/06/Irrirgating.jpg">
+      <img src="https://westafricanagri.com/wp-content/uploads/2020/06/Irrirgating.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Calculate the water needed for Irrigation</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://media.istockphoto.com/id/1126541751/photo/hands-planting-the-seeds-into-the-dirt.jpg?s=612x612&w=0&k=20&c=aVUr7F_H4ZSJX89Nmiw59F8WvneKeg-YsBoOiDQw0SA= ">
+      <img src="https://media.istockphoto.com/id/1126541751/photo/hands-planting-the-seeds-into-the-dirt.jpg?s=612x612&w=0&k=20&c=aVUr7F_H4ZSJX89Nmiw59F8WvneKeg-YsBoOiDQw0SA="  alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Sowing</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://media.istockphoto.com/id/1151784210/photo/ripe-rice-field-and-sky-background-at-sunset.jpg?s=612x612&w=0&k=20&c=DZz4wxIbPXnMhmoTsEV06uYKup9MEZTtRFe2XkDb0mY=">
+      <img src="https://media.istockphoto.com/id/1151784210/photo/ripe-rice-field-and-sky-background-at-sunset.jpg?s=612x612&w=0&k=20&c=DZz4wxIbPXnMhmoTsEV06uYKup9MEZTtRFe2XkDb0mY=" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Sundrying / Threshing of crops</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://static.vecteezy.com/system/resources/previews/010/508/297/large_2x/old-farmers-spray-fertilizer-or-chemical-pesticides-in-the-rice-fields-chemical-fertilizers-free-photo.jpg">
+      <img src="https://static.vecteezy.com/system/resources/previews/010/508/297/large_2x/old-farmers-spray-fertilizer-or-chemical-pesticides-in-the-rice-fields-chemical-fertilizers-free-photo.jpg" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Apply Agricultural chemicals</div>
+  </div>
+</div>
+</body>
+</html>
+
+

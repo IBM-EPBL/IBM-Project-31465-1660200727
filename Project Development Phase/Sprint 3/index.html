@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Rainfall prediction Webpage</title>
+
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+
+    <style>
+         .head1{
+        
+        color: rgb(10, 73, 112);
+        font-family: 'Century Gothic';
+        font-size: 60px;
+        width: 40%;
+        margin-left: 30%;
+        text-align: center;
+        margin-top: 2vh;
+        padding: 5px;
+    }
+
+   
+    </style>
+    </head>
+   
+<body>
+    <div class="login">
+        <div>
+            <div class="head1">
+            RAINFALL PREDICTION
+        </div>
+
+        
+            <form action="{{ url_for('predict')}}"method="post">
+        <br>
+        <br>
+        <div class="body1">
+        <label for="Location">Location:</label>
+         <select id="Location" name="Location">
+            <option value=2>Albury</option>
+            <option value=4>Badgeryscreek</option>
+            <option value=10>Cobar</option>
+            <option value=11>CoffsHarbour</option>
+            <option value=21>Moree</option>
+            <option value=24>Newcastle</option>
+            <option value=26>NorahHead</option>
+            <option value=27>Norfolksland</option>
+            <option value=30>Penrith</option>
+            <option value=34>Richmond</option>
+            <option value=37>Sydney</option>
+            <option value=38>SydneyAirport</option>
+            <option value=42>Waggawagga</option>
+            <option value=45>Williamtown</option>
+            <option value=47>Wollongong</option>
+            <option value=9>Canberra</option>
+            <option value=40>MountGinini</option>
+            <option value=5>Ballarat</option>
+            <option value=6>Bandigo</option>
+            <option value=35>Sale</option>
+            <option value=19>MelborneAirport</option>
+            <option value=18>Melborne</option>
+            <option value=20>Mildura</option>
+            <option value=25>Nhill</option>
+            <option value=33>Portland</option>
+            <option value=44>Watsonia</option>
+         </select>
+
+         <label for="MinTemp">MinTemp:</label>
+         <input type = "number" step="any" id="MinTemp" name="MinTemp" value="MinTemp">
+
+         <label for="MaxTemp">MaxTemp:</label>
+         <input type = "number" step="any" id="MaxTemp" name="MaxTemp" value="MaxTemp">
+
+         <label for="Rainfall">Rainfall:</label>
+         <input type = "number" step="any" id="Rainfall" name="Rainfall" value="Rainfall">
+
+         <label for="WindGustSpeed">WindGustSpeed:</label>
+         <input type = "number" step="any" id="WindGustSpeed" name="WindGustSpeed" value="WindGustSpeed">
+<br>
+<br>
+         <label for="WindSpeed9am">WindSpeed9am:</label>
+         <input type = "number" step="any" id="WindSpeed9am" name="WindSpeed9am" val="WindSpeed9am">
+
+         <label for="WindSpeed3pm">WindSpeed3pm:</label>
+         <input type = "number" step="any" id="WindSpeed3pm" name="WindSpeed3pm" val="WindSpeed3pm">
+
+         <label for="Humidity9am">Humidity9am:</label>
+         <input type = "number" step="any" id="Humidity9am" name="Humidity9am" val="Humidity9am">
+
+         <label for="Humidity3pm">Humidity3pm:</label>
+         <input type = "number" step="any" id="Humidity3pm" name="Humidity3pm" val="Humidity3pm">
+<br>
+<br>
+         <label for="Pressure9am">Pressure9am:</label>
+         <input type = "number" step="any" id="Pressure9am" name="Pressure9am" val="Pressure9am">
+
+         <label for="Pressure3pm">Pressure3pm:</label>
+         <input type = "number" step="any" id="Pressure3pm" name="Pressure3pm" val="Pressure3pm">
+
+         <label for="Temp9am">Temp9am:</label>
+         <input type = "number" step="any" id="Temp9am" name="Temp9am" val="Temp9am">
+
+         <label for="Temp3pm">Temp3pm:</label>
+         <input type = "number" step="any" id="Temp3pm" name="Temp3pm" val="Temp3pm">
+
+<br>
+<br>
+
+<label for="RainToday">RainToday</label>
+<select id="RainToday" name="RainToday">
+    <option value="1">Yes</option>
+    <option value="2">No</option>
+</select>
+
+<label for="WindGustDir">WindGustDir</label>
+    <select id="WindGustDir" name="WindGustDir">
+        <option value=14>W</option>
+        <option value=15>WNW</option>
+        <option value=0>WSW</option>
+        <option value=7>NE</option>
+        <option value=13>NNW</option>
+        <option value=10>N</option>
+        <option value=2>NNE</option>
+        <option value=1>SW</option>
+        <option value=6>ENE</option>
+        <option value=11>SSE</option>
+        <option value=12>S</option>
+        <option value=9>NW</option>
+        <option value=3>SE</option>
+        <option value=8>ESE</option>
+        <option value=5>E</option>
+        <option value=5>NA</option>
+        <option value=4>SSW</option>
+    </select> &nbsp;&nbsp;
+
+    <label for="WindDir9am">WindDir9am</label>
+    <select id="WindDir9am" name="WindDir9am">
+        <option value=14>W</option>
+        <option value=15>NNW</option>
+        <option value=0>SE</option>
+        <option value=7>ENE</option>
+        <option value=13>SW</option>
+        <option value=10>SSE</option>
+        <option value=2>S</option>
+        <option value=1>NE</option>
+        <option value=6>NA</option>
+        <option value=11>SSW</option>
+        <option value=12>N</option>
+        <option value=9>WSW</option>
+        <option value=3>ESE</option>
+        <option value=8>E</option>
+        <option value=5>NW</option>
+        <option value=4>WNW</option>
+        <option value=4>NNE</option>
+    </select> &nbsp;&nbsp;    
+
+<label for="WindDir3pm">WindDir3pm</label>
+    <select id="WindDir3pm" name="WindDir3pm">
+        <option value=14>WNW</option>
+        <option value=15>WSW</option>
+        <option value=0>E</option>
+        <option value=7>NW</option>
+        <option value=13>W</option>
+        <option value=10>SSE</option>
+        <option value=2>ESE</option>
+        <option value=1>ENE</option>
+        <option value=6>NNW</option>
+        <option value=11>SSW</option>
+        <option value=12>SW</option>
+        <option value=9>SE</option>
+        <option value=3>N</option>
+        <option value=8>S</option>
+        <option value=5>NNE</option>
+        <option value=5>NA</option>
+        <option value=4>NE</option>
+    </select> &nbsp;&nbsp;
+
+    </div>
+<br>
+
+<br><br>
+
+<center><button class="button-3" role="button">PREDICT</button></center>
+</form>
+<br>
+
+    {{output}}
+
+    <br>
+    <br>
+    <img src="data:image/png;base64,{{url_3}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <img src="data:image/png;base64,{{url_1}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <img src="data:image/png;base64,{{url_4}}" alt="Submit Form" height="180" width="233" onerror="this.style.display='none'"/>
+    <br>
+    <br>
+    <img src="data:image/png;base64,{{url_2}}" alt="Submit Form" height="150" width="711" onerror="this.style.display='none'"/>
+    </div>
+    
+    </body>
+    <footer><p>IBM - Nalaiya Thiran</p></footer>
+</html>

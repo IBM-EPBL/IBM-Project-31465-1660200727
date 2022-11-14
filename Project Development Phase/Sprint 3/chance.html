@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+      <title>Rainfall Prediction</title>
+<style>
+  body {
+  background: linear-gradient(45deg, rgb(169, 250, 247), rgb(216, 77, 255)) fixed;
+}
+div.gallery {
+  border: 1px solid rgb(0, 0, 0);
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 366px;
+  height: 280px;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  margin-top: 15vh;
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.icon img {
+        float: left;
+        width: 100px;
+        height: 100px;
+        background: #555;
+        margin-left: 5%;
+      }
+</style>
+</head>
+<body>
+    <div class="icon">
+        <img src="{{url_for('static', filename='css/raincloud.png')}}" alt="logo" />
+      </div>
+<center><h1>Chances of rain today</h1>
+    
+<br> 
+<h2>You can follow any of the following process for effective agriculture!</h2></center>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://affordabletreeservice.com.au/shared/content/uploads/Land-clearing-hero-1-1024x550.jpg">
+      <img src="https://affordabletreeservice.com.au/shared/content/uploads/Land-clearing-hero-1-1024x550.jpg" alt="Cinque Terre" width="600" height="400">
+    </a>
+    <div class="desc">Land Clearing</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://www.britannica.com/explore/savingearth/wp-content/uploads/sites/4/2019/04/0000156670-1024x681.jpg ">
+      <img src="https://www.britannica.com/explore/savingearth/wp-content/uploads/sites/4/2019/04/0000156670-1024x681.jpg"  alt="Forest" width="600" height="400">
+    </a>
+    <div class="desc">Ensure proper drainage</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://4.imimg.com/data4/VQ/KS/MY-3597886/img_0112-500x500.jpg">
+      <img src="https://4.imimg.com/data4/VQ/KS/MY-3597886/img_0112-500x500.jpg" alt="Northern Lights" width="600" height="400">
+    </a>
+    <div class="desc">Set up a rain cover</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="https://soilsmatter.files.wordpress.com/2015/02/sensor-based-nitrogen-application-to-corn-maize-in-the-midwest-photo-raun.jpg?w=1200">
+      <img src="https://soilsmatter.files.wordpress.com/2015/02/sensor-based-nitrogen-application-to-corn-maize-in-the-midwest-photo-raun.jpg?w=1200" alt="Mountains" width="600" height="400">
+    </a>
+    <div class="desc">Pre-plant Fertilizer</div>
+  </div>
+</div>
+</body>
+</html>
+
+
